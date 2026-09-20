@@ -207,7 +207,7 @@ in
           }
         ];
 
-        xdg.autostart = {
+        autostart = {
            enable = lib.mkDefault true;
            entries = [ (pkgs.writeText "plasma-manager-autostart.desktop" ''
               [Desktop Entry]
