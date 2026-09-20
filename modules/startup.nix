@@ -210,13 +210,14 @@ in
         xdg.autostart = {
            enable = lib.mkDefault true;
            entries = [ (pkgs.writeText "plasma-manager-autostart.desktop" ''
-            [Desktop Entry]
-            Type=Application
-            Name=Plasma Manager theme application
-            Exec=${config.xdg.dataHome}/plasma-manager/${topScriptName}
-            X-KDE-autostart-condition=ksmserver
-          '')
-        ];
+              [Desktop Entry]
+              Type=Application
+              Name=Plasma Manager theme application
+              Exec=${config.xdg.dataHome}/plasma-manager/${topScriptName}
+              X-KDE-autostart-condition=ksmserver
+            '')
+          ];
+        };
       };
 
   # Due to the fact that running certain desktop-scripts can reset what has
