@@ -1,6 +1,6 @@
 # Allows to run commands/scripts at startup (this is used by some of the other
 # modules, which may need to do this, but can also be used on its own)
-{ config, lib, ... }:
+{ config, lib, pkgs, ... }:
 let
   cfg = config.programs.plasma;
   topScriptName = "run_all.sh";
